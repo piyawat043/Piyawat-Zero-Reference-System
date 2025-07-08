@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyawat Zero Reference System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4ade80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 768px) {
+            .section {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+        /* Style for the video background */
+        .header-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+
+<!-- Header / Hero Section with Video Background -->
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline class="header-video opacity-300">
+        <source src="bggok.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอแท็ก
+    </video>
+
+    <!-- Overlay for text readability -->
+    <div class="absolute inset-0 bg-white/80"></div>
+
+    <!-- Header Content -->
+    <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+        
+        <!-- Your Logo -->
+        <img src="mc005mini02.png" alt="Maker Customs Logo" class="mx-auto mb-8 w-32 h-32 md:w-32 md:h-32 object-contain" onerror="this.style.display='none'">
+
+        <div class="inline-block bg-blue-50 text-blue-900 px-4 py-1 rounded-full text-sm font-medium mb-4 border border-blue-200">
+            มาตรฐานใหม่ของการออกแบบเพื่ออนาคต
+        </div>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-blue-900 leading-tight">
+            <span class="gradient-text">1 เหลี่ยม</span> เปลี่ยนอนาคต
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+            ZERO ไม่ใช่แค่จุด... แต่มันคือ "ระบบ" ที่จะเปลี่ยนวิธีคิดในการออกแบบ, ผลิต, และพัฒนางานของคุณไปตลอดกาล
+        </p>
+        <div class="mt-10">
+            <a href="#problem" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md">
+                ค้นพบแนวคิด
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <!-- Problem Section -->
+    <section id="problem" class="bg-white section px-4 text-gray-800">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                    🚨 ปัญหาที่ทุกคนเจอ (แต่ไม่มีใครพูดถึง)
+                </h2>
+                <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+                    "ทำไมเราต้องเริ่มใหม่ทุกครั้งที่จะแก้งาน?" คำถามง่ายๆ ที่นำไปสู่การค้นพบความซับซ้อนและความซ้ำซ้อนในกระบวนการทำงานแบบเดิมๆ
+                </p>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-2 gap-8 items-start">
+                
+                <!-- Card: แบบเดิม -->
+                <div class="bg-blue-900/90 p-6 rounded-lg border border-blue-800 flex flex-col h-full text-white">
+                    <!-- Video for "แบบเดิม" -->
+                    <div class="mb-4 rounded-lg overflow-hidden">
+                        <video autoplay loop muted playsinline class="w-full h-auto" src="vise.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-blue-800 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-blue-200\'>ไม่พบวิดีโอ</p></div>';">
+                            เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+                        </video>
+                    </div>
+                    <h3 class="text-xl font-semibold text-red-300">
+                        แบบเดิม: วุ่นวายและซับซ้อน
+                    </h3>
+                    <ul class="mt-4 space-y-3 text-blue-100">
+                        <li>❌ ต้องอธิบายรายละเอียดทั้งหมดเมื่อส่งงาน</li>
+                        <li>⏱️ เสียเวลาตั้งค่างานใหม่ทุกครั้งที่แก้ไข</li>
+                        <li>⚠️ เสี่ยงต่อความผิดพลาดในการสื่อสาร</li>
+                        <li>🛑 การพัฒนาต่อยอดทำได้ยาก กลายเป็นภาระ</li>
+                    </ul>
+                </div>
+                
+                <!-- Card: แบบใหม่ -->
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 flex flex-col h-full text-blue-900">
+                    <!-- Video for "แบบใหม่" -->
+                    <div class="mb-4 rounded-lg overflow-hidden">
+                        <video autoplay loop muted playsinline class="w-full h-auto" src="new3dprobeaa.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-blue-100 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-blue-500\'>ไม่พบวิดีโอ</p></div>';">
+                            เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+                        </video>
+                    </div>
+                    <h3 class="text-xl font-semibold text-green-600">
+                        แบบใหม่: ด้วย Zero System
+                    </h3>
+                    <ul class="mt-4 space-y-3 text-blue-800">
+                        <li>✅ บอกแค่ว่า "วัด 6 จุดได้เลย"</li>
+                        <li>⚡ แก้ไขงานได้ทันที ไม่ต้องตั้งค่าใหม่</li>
+                        <li>🎯 ลดความผิดพลาด ใช้ชิ้นงานเป็นภาษากลาง</li>
+                        <li>🚀 พัฒนาต่อยอดได้อย่างไม่มีขีดจำกัด</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Solution Section -->
+<section id="solution" class="section px-4 bg-white text-gray-800">
+    <div class="container mx-auto max-w-5xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+            💡 Piyawat Zero Reference System คืออะไร?
+        </h2>
+        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+            มันคือ "ภาษากลางของการออกแบบเพื่ออนาคต" ด้วยแนวคิดที่เรียบง่ายจนน่าทึ่ง:
+        </p>
+        <div class="mt-8 bg-blue-50 p-8 rounded-lg border border-blue-200 inline-block shadow">
+            <p class="text-xl md:text-2xl font-semibold text-blue-900">
+                "ออกแบบอะไรก็ได้ ขอแค่วาง 
+                <span class="gradient-text font-bold">'เหลี่ยม'</span> 
+                หรือ 
+                <span class="gradient-text font-bold">'ขอบวัด 6 จุด'</span> 
+                ไว้ในชิ้นงาน"
+            </p>
+        </div>
+        <div class="mt-8">
+            <!-- Diagram Image -->
+            <div class="w-full max-w-2xl mx-auto bg-blue-50 p-2 rounded-lg border border-blue-200 shadow">
+                <img src="04072025PMZ8.png" alt="ไดอะแกรม Piyawat Zero Reference System" class="rounded-md w-full h-auto shadow-lg">
+            </div>
+        </div>
+
+<section id="story" class="section px-4 bg-white text-gray-800">
+    <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                📖 เรื่องราวของ 2 ชิ้นงาน: ความแตกต่างที่มองไม่เห็น
+            </h2>
+            <p class="mt-4 text-lg text-gray-700">
+                เมื่อชิ้นงานที่หน้าตาเหมือนกัน กลับมีอนาคตที่แตกต่างกันโดยสิ้นเชิง
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Step 1 & 2 -->
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
+                <h3 class="text-xl font-bold mb-3 gradient-text">1. ออกแบบและส่งผลิต</h3>
+                <p class="text-gray-700">
+                    <b class="text-green-600">ชิ้นงาน A (มี Zero):</b> ใส่ "เหลี่ยม" รองรับการวัด 6 จุด และส่งผลิตโดยไม่ต้องอธิบายเพิ่ม
+                </p>
+                <p class="mt-2 text-gray-700">
+                    <b class="text-red-600">ชิ้นงาน B (ไม่มี Zero):</b> ไม่ได้ใส่ "เหลี่ยม" ต้องอธิบายรายละเอียดทั้งหมดให้โรงงาน
+                </p>
+            </div>
+            <!-- Step 3 & 4 -->
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
+                <h3 class="text-xl font-bold mb-3 gradient-text">2. ต้องการแก้ไข</h3>
+                <p class="text-gray-700">
+                    <b class="text-green-600">ชิ้นงาน A:</b> ส่งให้ใครก็ได้ที่มีเครื่อง CNC *และมีฟังชั้นวัด 6 จุด* ช่วยเจาะเพิ่มได้ทันที
+                </p>
+                <p class="mt-2 text-gray-700">
+                    <b class="text-red-600">ชิ้นงาน B:</b> ต้องเริ่มกระบวนการตั้งค่างานใหม่ทั้งหมด วุ่นวายและเสี่ยงต่อความผิดพลาด
+                </p>
+            </div>
+            <!-- Step 5 & 6 -->
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
+                <h3 class="text-xl font-bold mb-3 gradient-text">3. ผลลัพธ์และอนาคต</h3>
+                <p class="text-gray-700">
+                    <b class="text-green-600">ชิ้นงาน A:</b> แก้ไขเสร็จในไม่กี่นาที พร้อมพัฒนาต่อยอดไปได้เรื่อยๆ
+                </p>
+                <p class="mt-2 text-gray-700">
+                    <b class="text-red-600">ชิ้นงาน B:</b> อาจต้องทำใหม่ทั้งชิ้น หรือใช้เวลาตั้งค่านานมาก สุดท้ายกลายเป็นภาระ
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Video Section -->
+<section id="videos" class="bg-white section px-4 text-gray-800">
+    <div class="container mx-auto max-w-5xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+            🎥 ชมแนวคิดผ่านวิดีโอ
+        </h2>
+        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+            ทำความเข้าใจแนวคิด "Zero Reference System" ได้ง่ายๆ และเห็นภาพความแตกต่างอย่างชัดเจน
+        </p>
+        <div class="mt-12 grid md:grid-cols-2 gap-8">
+            <!-- Video 1: The Concept -->
+            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+                <div class="aspect-[9/16]">
+                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/zHc43y5YUAQ" title="Piyawat Zero Reference System Concept" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Video 2: The Story -->
+            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+                <div class="aspect-[9/16]">
+                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/kY5e6HPs2k4" title="The Story of Two Workpieces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Storyboard Section -->
+<section id="benefits" class="section px-4 bg-white text-gray-800">
+    <div class="container mx-auto max-w-5xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+            🚀 เปลี่ยน "วิธีคิด" ปลดล็อก "อนาคต"
+        </h2>
+        <p class="mt-4 text-lg text-gray-700">
+            Zero System ไม่ได้เปลี่ยนแค่ชิ้นงาน แต่เปลี่ยนกระบวนการทั้งหมด
+        </p>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
+                <h3 class="text-lg font-semibold text-blue-900">
+                    🤝 ทำงานร่วมกันอย่างไร้รอยต่อ
+                </h3>
+                <p class="mt-2 text-gray-700">
+                    ใช้ "ชิ้นงาน" เป็นภาษากลาง ลดการสื่อสารที่ผิดพลาด
+                </p>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
+                <h3 class="text-lg font-semibold text-blue-900">
+                    ⏱️ ประหยัดเวลาและต้นทุน
+                </h3>
+                <p class="mt-2 text-gray-700">
+                    ลดขั้นตอนการตั้งค่าใหม่ที่ไม่จำเป็น ทำให้แก้ไขงานได้รวดเร็ว
+                </p>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
+                <h3 class="text-lg font-semibold text-blue-900">
+                    ♾️ ศักยภาพในการพัฒนาไม่สิ้นสุด
+                </h3>
+                <p class="mt-2 text-gray-700">
+                    ชิ้นงานของคุณพร้อมเสมอสำหรับการปรับปรุงและต่อยอด
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+<!-- More Videos Section -->
+<section id="more-videos" class="bg-white section px-4 text-gray-800">
+    <div class="container mx-auto max-w-5xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+            🎬 ตัวอย่างเพิ่มเติมและการประยุกต์ใช้
+        </h2>
+        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+            ดูตัวอย่างการนำ Zero System ไปใช้จริงในสถานการณ์ต่างๆ
+        </p>
+        <div class="mt-12 grid md:grid-cols-2 gap-8">
+            <!-- Video 3 -->
+            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+                <div class="aspect-[9/16]">
+                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/OgHZbu8aiSI" title="More Examples" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Video 4 -->
+            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+                <div class="aspect-video">
+                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/MT86fhXfzqU?si=JY4D5SpH35ax0525" title="Application and Use Case" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Video 5 -->
+            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200 md:col-span-2">
+                <div class="aspect-video">
+                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/f9x59gIhqxU" title="Application and Use Case" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Benefits Section -->
+
+
+    </main>
+<!-- Founder & Contact Section -->
+
+
+<!-- Downloads & Links Section -->
+<section class="section bg-white text-gray-800">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-blue-900 mb-12">
+            🛠️ ทรัพยากรและเครื่องมือ
+        </h2>
+        <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
+            
+            <!-- Paper Download Card -->
+            <div class="bg-blue-50 p-8 rounded-lg text-center flex flex-col justify-between w-full md:w-1/3 shadow-lg border border-blue-200">
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-900">
+                        📄 เอกสารข้อมูลเชิงลึก (White Paper)
+                    </h3>
+                    <p class="mt-3 text-gray-700">
+                        เจาะลึกแนวคิดและเทคโนโลยีเบื้องหลัง Maker Customs OS ที่จะปฏิวัติการทำงาน CNC ของคุณ
+                    </p>
+                </div>
+                <button id="openModalBtn" class="mt-6 inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-transform transform hover:scale-105">
+                    อ่าน Paper
+                </button>
+            </div>
+            
+            <!-- CNC UI Link Card -->
+            <div class="bg-blue-50 rounded-lg text-center flex flex-col justify-between w-full md:w-1/3 shadow-lg border border-blue-200">
+                <video autoplay loop muted playsinline src="uicnc.mp4" onerror="this.style.display='none'" class="rounded-t-lg"></video>
+                <div class="content p-8 h-full flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-blue-900">
+                            🖥️ MakerCustoms OS (iMAK CNC)
+                        </h3>
+                        <p class="mt-3 text-gray-700">
+                            เข้าสู่หน้าจอควบคุมหลัก (Main UI) ของระบบ CNC ที่ถูกออกแบบมาเพื่อลดความซับซ้อนและเพิ่มประสิทธิภาพ
+                        </p>
+                    </div>
+                    <a href="https://piyawat043.github.io/MakerCustoms-CNC-OS/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                        ไปยัง iMAK CNC UI
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="founder" class="py-20 bg-white text-gray-800">
+    <div class="container mx-auto px-6 text-center">
+        <div class="max-w-2xl mx-auto fade-in">
+            <img src="founder.png" alt="ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)" class="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg border-4 border-blue-200">
+            <h2 class="text-3xl font-bold text-blue-900">
+                👨‍💻 ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)
+            </h2>
+            <p class="text-lg text-gray-700 mb-4">
+                ผู้สร้างและผู้ก่อตั้ง, Maker Customs OS
+            </p>
+            <div class="bg-blue-50 p-8 rounded-lg shadow-md text-left space-y-6 border border-blue-200">
+                <blockquote class="border-l-4 border-blue-400 pl-4 italic text-gray-700">
+                    “ผมพูดกับทุกคนทุกระดับเหมือนกันหมด ไม่ว่าคน ๆ นั้นจะเป็นคนเก็บขยะหรือจะเป็นอธิการบดีของโรงเรียนก็ตามที”
+                    <cite class="block text-right not-italic font-semibold text-blue-900 mt-2">
+                        - อัลเบิร์ต ไอน์สไตน์
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto py-6 px-4 text-center text-gray-500">
+            <p>&copy; 2024 Piyawat Zero Reference System. แนวคิดเพื่อการเปลี่ยนแปลง</p>
+        </div>
+    </footer>
+   <!-- Paper Viewer Modal -->
+    <div id="paperModal" class="modal-overlay hidden fixed inset-0 bg-black bg-opacity-75 items-center justify-center p-4 z-50 opacity-0">
+        <div class="modal-content bg-gray-800 rounded-lg shadow-xl w-full max-w-3xl max-h-full flex flex-col scale-95 opacity-0">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-4 border-b border-gray-700">
+                <h3 class="text-xl font-semibold text-white">White Paper Viewer</h3>
+                <button id="closeModalBtn" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+            </div>
+            <!-- Modal Body -->
+            <div class="p-4 flex-grow overflow-y-auto relative">
+                <img id="paperImage" src="" alt="White Paper Page" class="w-full h-auto rounded" onerror="this.src='https://placehold.co/800x1131/1f2937/ffffff?text=Image+Not+Found';">
+            </div>
+            <!-- Modal Footer (Navigation) -->
+            <div class="flex justify-between items-center p-4 border-t border-gray-700">
+                <button id="prevBtn" class="bg-gray-600 text-white font-bold py-2 px-4 rounded hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed">
+                    &lt; ก่อนหน้า
+                </button>
+                <span id="pageIndicator" class="text-gray-300">หน้า 1 / 3</span>
+                <button id="nextBtn" class="bg-gray-600 text-white font-bold py-2 px-4 rounded hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed">
+                    ถัดไป &gt;
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Modal Logic ---
+
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const modal = document.getElementById('paperModal');
+            const modalContent = modal.querySelector('.modal-content');
+            const paperImage = document.getElementById('paperImage');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const pageIndicator = document.getElementById('pageIndicator');
+
+            // !!! สำคัญ !!!
+            // 1. แปลงไฟล์ PDF ของคุณเป็นรูปภาพ (JPG หรือ PNG)
+            // 2. ตั้งชื่อไฟล์เรียงตามลำดับ เช่น paper-1.jpg, paper-2.jpg
+            // 3. นำไฟล์รูปภาพไปไว้ในโฟลเดอร์เดียวกับ index.html
+            // 4. แก้ไขรายการด้านล่างให้ตรงกับชื่อไฟล์ของคุณ
+            const paperPages = [
+                'paper-1.jpg', // แทนที่ด้วย 'paper-1.jpg'
+                'paper-2.jpg', // แทนที่ด้วย 'paper-2.jpg'
+                'paper-3.jpg'  // แทนที่ด้วย 'paper-3.jpg'
+            ];
+            
+            let currentPage = 0;
+
+            function updateModalContent() {
+                if (paperPages.length > 0) {
+                    paperImage.src = paperPages[currentPage];
+                    pageIndicator.textContent = `หน้า ${currentPage + 1} / ${paperPages.length}`;
+                    prevBtn.disabled = currentPage === 0;
+                    nextBtn.disabled = currentPage === paperPages.length - 1;
+                }
+            }
+
+            function openModal() {
+                currentPage = 0;
+                updateModalContent();
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                // Trigger transition
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            }
+
+            function closeModal() {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 300); // Wait for transition to finish
+            }
+
+            if (openModalBtn) {
+                openModalBtn.addEventListener('click', openModal);
+            }
+            if(closeModalBtn) {
+                closeModalBtn.addEventListener('click', closeModal);
+            }
+            
+            // Close modal when clicking on the overlay
+            if(modal) {
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    if (currentPage > 0) {
+                        currentPage--;
+                        updateModalContent();
+                    }
+                });
+            }
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    if (currentPage < paperPages.length - 1) {
+                        currentPage++;
+                        updateModalContent();
+                    }
+                });
+            }
+        });
+    </script>
+
+
+</body>
+</html>
